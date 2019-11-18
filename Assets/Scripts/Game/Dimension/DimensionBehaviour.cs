@@ -4,6 +4,8 @@ namespace Game.Dimension
 {
     public class DimensionBehaviour : MonoBehaviour
     {
+        [SerializeField] private bool _isActiveInGood = true;
+        [SerializeField] private bool _isActiveInEvil = true;
         [SerializeField] private GameObject _goodView;
         [SerializeField] private GameObject _evilView;
 
@@ -21,7 +23,7 @@ namespace Game.Dimension
                     _evilView.SetActive(false);
                 }
 
-                if (_goodView != null)
+                if (_isActiveInGood)
                 {
                     _goodView.SetActive(true);
                     gameObject.SetActive(true);
@@ -38,7 +40,7 @@ namespace Game.Dimension
                     _goodView.SetActive(false);
                 }
 
-                if (_evilView != null)
+                if (_isActiveInEvil)
                 {
                     _evilView.SetActive(true);
                     gameObject.SetActive(true);

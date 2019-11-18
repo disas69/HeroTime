@@ -93,8 +93,8 @@ namespace Game.Characters
             }
             else
             {
-                if (_velocity.x > 0 || _velocity.x < 0 || _rigidbody2D.velocity.y > 0f ||
-                    _rigidbody2D.velocity.y < 0f)
+                if (_velocity.x > 0 || _velocity.x < 0 || _rigidbody2D.velocity.y > 0.01f ||
+                    _rigidbody2D.velocity.y < -0.01f || !_groundDetector.IsGrounded)
                 {
                     TimeController.Instance.Play();
                 }
@@ -133,6 +133,14 @@ namespace Game.Characters
             if (enemy != null)
             {
                 _onPlayedDied.Invoke();
+            }
+            else
+            {
+                var damageZone = other.gameObject.GetComponent<DamageZone>();
+                if (damageZone != null)
+                {
+                    _onPlayedDied.Invoke();
+                }
             }
         }
 

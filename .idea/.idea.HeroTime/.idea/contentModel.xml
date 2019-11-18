@@ -250,7 +250,6 @@
           <e p="Game" t="Include">
             <e p="Characters" t="Include">
               <e p="Enemy.cs" t="Include" />
-              <e p="GroundDetector.cs" t="Include" />
               <e p="Player.cs" t="Include" />
               <e p="PlayerSettings.cs" t="Include" />
             </e>
@@ -264,6 +263,8 @@
             </e>
             <e p="Elements" t="Include">
               <e p="DamageZone.cs" t="Include" />
+              <e p="TextHint.cs" t="Include" />
+              <e p="TriggerZone.cs" t="Include" />
             </e>
             <e p="GameController.cs" t="Include" />
             <e p="GameSession.cs" t="Include" />
@@ -279,7 +280,9 @@
               <e p="TimeState.cs" t="Include" />
             </e>
             <e p="Tools" t="Include">
+              <e p="AnimationUscaledTimePlayer.cs" t="Include" />
               <e p="GameStateParameterProvider.cs" t="Include" />
+              <e p="GroundDetector.cs" t="Include" />
             </e>
             <e p="UI" t="Include">
               <e p="EndPage.cs" t="Include" />

@@ -6,6 +6,7 @@ namespace Game.Time
     public class State
     {
         public Vector2 Position;
+        public float Rotation; 
         public Vector2 Velocity;
     }
     

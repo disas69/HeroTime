@@ -30,6 +30,7 @@ namespace Game.Time
         public void Apply(State state)
         {
             _rigidbody2D.MovePosition(state.Position);
+            _rigidbody2D.SetRotation(state.Rotation);
             _rigidbody2D.velocity = state.Velocity;
         }
 
@@ -38,6 +39,7 @@ namespace Game.Time
             return new State
             {
                 Position = _rigidbody2D.position,
+                Rotation = _rigidbody2D.rotation,
                 Velocity = _rigidbody2D.velocity
             };
         }
