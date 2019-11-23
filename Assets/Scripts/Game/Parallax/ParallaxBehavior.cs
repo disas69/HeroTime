@@ -14,11 +14,6 @@ namespace Assets.Scripts.Game.Parallax
         private float _lenght, _startPosition;
         private Camera _camera;
 
-        private void OnEnable()
-        {
-            ParallaxController.Instance.AddBehavior(this);
-        }
-
         void Start()
         {
             _camera = Camera.main;
@@ -30,11 +25,6 @@ namespace Assets.Scripts.Game.Parallax
         {
             var dist = _camera.transform.position.x * _parallaxEffect;
             transform.position = new Vector3(_startPosition + dist, transform.position.y, transform.position.z);
-        }
-
-        private void OnDisable()
-        {
-            ParallaxController.Instance.RemoveBehavior(this);
         }
     }
 }
