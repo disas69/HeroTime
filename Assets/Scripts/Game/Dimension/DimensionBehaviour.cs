@@ -14,7 +14,7 @@ namespace Game.Dimension
             DimensionController.Instance.Add(this);
         }
 
-        public void Apply(Dimension dimension)
+        public virtual void Apply(Dimension dimension)
         {
             if (dimension == Dimension.Good)
             {

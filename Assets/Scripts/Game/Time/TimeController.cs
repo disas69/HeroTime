@@ -22,6 +22,7 @@ namespace Game.Time
 
         public bool CanRewind => _timeStates.Count > 0;
         public bool IsReversed => _isReversed;
+        public bool IsPlaying => _isPlaying;
 
         protected override void Awake()
         {

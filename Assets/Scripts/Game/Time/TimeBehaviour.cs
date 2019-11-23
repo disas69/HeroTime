@@ -6,10 +6,12 @@ namespace Game.Time
     public class TimeBehaviour : MonoBehaviour
     {
         private Rigidbody2D _rigidbody2D;
+        private bool _isKinematicInitial;
 
         private void Awake()
         {
             _rigidbody2D = GetComponent<Rigidbody2D>();
+            _isKinematicInitial = _rigidbody2D.isKinematic;
         }
 
         private void OnEnable()
@@ -19,7 +21,14 @@ namespace Game.Time
 
         public void Activate(bool isActive)
         {
-            _rigidbody2D.isKinematic = isActive;
+            if (isActive)
+            {
+                _rigidbody2D.isKinematic = true;
+            }
+            else
+            {
+                _rigidbody2D.isKinematic = _isKinematicInitial;
+            }
 
             if (isActive)
             {

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Framework.Tools.Singleton;
@@ -23,6 +24,7 @@ namespace Game.Dimension
         [SerializeField] private CanvasGroup _overlay;
         [SerializeField] private Camera _camera;
 
+        public event Action<Dimension> DimensionChanged;
         public Dimension Dimension => _dimension;
 
         public void Change()
@@ -61,6 +63,8 @@ namespace Game.Dimension
             }
 
             _changeCoroutine = StartCoroutine(ApplyDimension(dimension));
+            
+            DimensionChanged?.Invoke(_dimension);
         }
 
         private IEnumerator ApplyDimension(Dimension dimension)

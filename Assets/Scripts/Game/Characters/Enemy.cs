@@ -1,3 +1,4 @@
+using Game.Dimension;
 using Game.Time;
 using UnityEngine;
 
@@ -25,39 +26,51 @@ namespace Game.Characters
 
         private void Update()
         {
-            var overlap = Physics2D.OverlapCircle(transform.position, _searchRadius, LayerMask.GetMask("Player"));
-            if (overlap != null && overlap.gameObject.activeSelf)
+            if (DimensionController.Instance.Dimension == Dimension.Dimension.Evil)
             {
-                _isTargetFound = true;
-                _targetDirection = (overlap.transform.position - transform.position).normalized;
+                var overlap = Physics2D.OverlapCircle(transform.position, _searchRadius, LayerMask.GetMask("Player"));
+                if (overlap != null && overlap.gameObject.activeSelf)
+                {
+                    _isTargetFound = true;
+                    _targetDirection = (overlap.transform.position - transform.position).normalized;
+                }
+                else
+                {
+                    _isTargetFound = false;
+                    Patrol();
+                }
             }
             else
             {
                 _isTargetFound = false;
-                
-                if (_isGoingLeft)
+                Patrol();
+            }
+        }
+
+        private void Patrol()
+        {
+            if (_isGoingLeft)
+            {
+                if (transform.position.x > _spawnXPosition - _patrolRadius / 2f)
                 {
-                    if (transform.position.x > _spawnXPosition - _patrolRadius / 2f)
-                    {
-                        _targetDirection = Vector2.left;
-                    }
-                    else
-                    {
-                        _targetDirection = Vector2.right;
-                        _isGoingLeft = false;
-                    }
+                    _targetDirection = Vector2.left;
                 }
                 else
                 {
-                    if (transform.position.x < _spawnXPosition + _patrolRadius / 2f)
-                    {
-                        _targetDirection = Vector2.right;
-                    }
-                    else
-                    {
-                        _targetDirection = Vector2.left;
-                        _isGoingLeft = true;
-                    }
+                    _targetDirection = Vector2.right;
+                    _isGoingLeft = false;
+                }
+            }
+            else
+            {
+                if (transform.position.x < _spawnXPosition + _patrolRadius / 2f)
+                {
+                    _targetDirection = Vector2.right;
+                }
+                else
+                {
+                    _targetDirection = Vector2.left;
+                    _isGoingLeft = true;
                 }
             }
         }

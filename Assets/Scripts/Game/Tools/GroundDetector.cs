@@ -16,6 +16,7 @@ namespace Game.Characters
         private List<Collision2D> _groundCollisions;
 
         [SerializeField] private int _slopeLimit = 30;
+        [SerializeField] private float _minGroundDistance;
 
         public bool IsGrounded => _isGrounded;
 
@@ -75,13 +76,12 @@ namespace Game.Characters
         {
             const float verticalOffset = 1f;
             const float rayLength = 10f;
-            const float minDistance = 0.6f;
 
             var hit2D = Raycast(position, verticalOffset, rayLength);
             groundDistance = hit2D.collider != null ? hit2D.distance - verticalOffset : rayLength;
             Debug.DrawLine(position, position + Vector2.down * groundDistance, Color.white, 1f);
 
-            return groundDistance <= minDistance;
+            return groundDistance <= _minGroundDistance;
         }
 
         private RaycastHit2D Raycast(Vector2 position, float verticalOffset, float rayLength)
@@ -116,7 +116,8 @@ namespace Game.Characters
 
         private void CheckGroundCollision(Collision2D collision)
         {
-            if (collision.collider != null && collision.collider.gameObject.layer == _groundLayer && !_groundCollisions.Contains(collision))
+            if (collision.collider != null && collision.collider.gameObject.layer == _groundLayer &&
+                !_groundCollisions.Contains(collision))
             {
                 _groundCollisions.Add(collision);
             }

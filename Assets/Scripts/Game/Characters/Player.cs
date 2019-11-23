@@ -18,7 +18,9 @@ namespace Game.Characters
         private PlayerInput _playerInput;
         private Vector2 _velocity;
         private Vector2 _gravity;
+        private bool _isJumping;
 
+        [SerializeField] private SpriteRenderer _sprite;
         [SerializeField] private UnityEvent _onPlayedDied;
 
         private void Awake()
@@ -44,7 +46,16 @@ namespace Game.Characters
         {
             if (context.performed)
             {
-                _velocity = context.ReadValue<Vector2>().x > 0f ? Vector2.right : Vector2.left;
+                if (context.ReadValue<Vector2>().x > 0f)
+                {
+                    _sprite.flipX = false;
+                    _velocity = Vector2.right;
+                }
+                else
+                {
+                    _sprite.flipX = true;
+                    _velocity = Vector2.left;
+                }
             }
             else if (context.canceled)
             {
@@ -54,9 +65,9 @@ namespace Game.Characters
 
         public void JumpOnPerformed(InputAction.CallbackContext context)
         {
-            if (context.started && _groundDetector.IsGrounded)
+            if (context.started && _groundDetector.IsGrounded && !_isJumping)
             {
-                _rigidbody2D.AddForce(Vector2.up * GameConfiguration.PlayerSettings.JumpForce, ForceMode2D.Impulse);
+                _isJumping = true;
             }
         }
 
@@ -93,8 +104,9 @@ namespace Game.Characters
             }
             else
             {
-                if (_velocity.x > 0 || _velocity.x < 0 || _rigidbody2D.velocity.y > 0.01f ||
-                    _rigidbody2D.velocity.y < -0.01f || !_groundDetector.IsGrounded)
+                if (_velocity.x > 0 || _velocity.x < 0 ||
+                    !_groundDetector.IsGrounded && (_rigidbody2D.velocity.y > 0.01f || _rigidbody2D.velocity.y < -0.01f)
+                    || _isJumping)
                 {
                     TimeController.Instance.Play();
                 }
@@ -112,10 +124,20 @@ namespace Game.Characters
                 return;
             }
 
-            Vector3 targetVelocity =
-                new Vector2(_velocity.x * 10f * GameConfiguration.PlayerSettings.MoveSpeed * UnityEngine.Time.fixedDeltaTime,
-                    _rigidbody2D.velocity.y);
-            _rigidbody2D.velocity = targetVelocity;
+            if (_isJumping)
+            {
+                _rigidbody2D.AddForce(Vector2.up * GameConfiguration.PlayerSettings.JumpForce, ForceMode2D.Impulse);
+                _isJumping = false;
+            }
+            else
+            {
+                Vector3 targetVelocity =
+                    new Vector2(
+                        _velocity.x * 10f * GameConfiguration.PlayerSettings.MoveSpeed *
+                        UnityEngine.Time.fixedDeltaTime,
+                        _rigidbody2D.velocity.y);
+                _rigidbody2D.velocity = targetVelocity;
+            }
         }
 
         private void OnTriggerEnter2D(Collider2D other)
@@ -129,18 +151,30 @@ namespace Game.Characters
 
         private void OnCollisionEnter2D(Collision2D other)
         {
-            var enemy = other.gameObject.GetComponent<Enemy>();
-            if (enemy != null)
+            CheckCollision(other);
+        }
+
+        private void OnCollisionStay2D(Collision2D other)
+        {
+            CheckCollision(other);
+        }
+
+        private void CheckCollision(Collision2D other)
+        {
+            if (DimensionController.Instance.Dimension == Dimension.Dimension.Evil)
             {
-                _onPlayedDied.Invoke();
-            }
-            else
-            {
-                var damageZone = other.gameObject.GetComponent<DamageZone>();
-                if (damageZone != null)
+                var enemy = other.gameObject.GetComponent<Enemy>();
+                if (enemy != null)
                 {
                     _onPlayedDied.Invoke();
+                    return;
                 }
+            }
+
+            var damageZone = other.gameObject.GetComponent<DamageZone>();
+            if (damageZone != null)
+            {
+                _onPlayedDied.Invoke();
             }
         }
 

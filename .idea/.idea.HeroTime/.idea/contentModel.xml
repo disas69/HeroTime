@@ -261,8 +261,12 @@
               <e p="DimensionBehaviour.cs" t="Include" />
               <e p="DimensionController.cs" t="Include" />
             </e>
+            <e p="Effects" t="Include">
+              <e p="DustEffect.cs" t="Include" />
+            </e>
             <e p="Elements" t="Include">
               <e p="DamageZone.cs" t="Include" />
+              <e p="FloatingPlatform.cs" t="Include" />
               <e p="TextHint.cs" t="Include" />
               <e p="TriggerZone.cs" t="Include" />
             </e>
@@ -289,6 +293,8 @@
               <e p="PlayPage.cs" t="Include" />
               <e p="ProgressBar.cs" t="Include" />
               <e p="StartPage.cs" t="Include" />
+              <e p="TimeIcon.cs" t="Include" />
+              <e p="TimeIconController.cs" t="Include" />
             </e>
           </e>
         </e>
