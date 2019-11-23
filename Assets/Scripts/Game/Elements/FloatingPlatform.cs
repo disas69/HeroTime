@@ -25,7 +25,8 @@ namespace Game.Elements
 
         private void FixedUpdate()
         {
-            if (!_isFloating || TimeController.Instance.IsReversed || !TimeController.Instance.IsPlaying)
+            if (!_isFloating || _maxDelta <= 0f || TimeController.Instance.IsReversed ||
+                !TimeController.Instance.IsPlaying)
             {
                 return;
             }
