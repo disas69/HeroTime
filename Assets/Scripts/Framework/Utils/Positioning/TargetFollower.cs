@@ -12,6 +12,7 @@ namespace Framework.Utils.Positioning
         [SerializeField] private bool _followX;
         [SerializeField] private bool _followY;
         [SerializeField] private bool _followZ;
+        [SerializeField] private float _yLimit;
         [SerializeField] private float _moveSmoothing;
 
         private void Awake()
@@ -59,7 +60,14 @@ namespace Framework.Utils.Positioning
 
             if (followY)
             {
-                newPosition.y = position.y;
+                if (position.y < _yLimit)
+                {
+                    newPosition.y = _yLimit;
+                }
+                else
+                {
+                    newPosition.y = position.y;
+                }
             }
 
             if (followZ)

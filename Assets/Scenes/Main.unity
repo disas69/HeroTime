@@ -747,6 +747,7 @@ MonoBehaviour:
   _followX: 1
   _followY: 1
   _followZ: 0
+  _yLimit: -3
   _moveSmoothing: 0.2
 --- !u!114 &1572692632 stripped
 MonoBehaviour:
@@ -1064,7 +1065,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41cd80c729c24d4a8694e04ce81ca6d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _recordTime: 5
+  _recordTime: 10
   _changeTimeCurve:
     serializedVersion: 2
     m_Curve:

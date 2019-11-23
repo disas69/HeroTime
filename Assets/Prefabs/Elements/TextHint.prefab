@@ -203,8 +203,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 7
-  m_fontSizeBase: 7
+  m_fontSize: 6
+  m_fontSizeBase: 6
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -408,8 +408,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isActiveInGood: 1
   _isActiveInEvil: 1
-  _goodView: {fileID: 820058218793624160}
-  _evilView: {fileID: 1969595633048233888}
+  _goodView: {fileID: 1969595633048233888}
+  _evilView: {fileID: 820058218793624160}
 --- !u!95 &3957753690565721350
 Animator:
   serializedVersion: 3
@@ -648,8 +648,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 7
-  m_fontSizeBase: 7
+  m_fontSize: 6
+  m_fontSizeBase: 6
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

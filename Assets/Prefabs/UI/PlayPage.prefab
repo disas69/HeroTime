@@ -50,8 +50,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5acfb7a50c24901863f471529d895bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _goodView: {fileID: 6661064526984200475}
-  _evilView: {fileID: 2377946331735064757}
+  _goodView: {fileID: 2377946331735064757}
+  _evilView: {fileID: 6661064526984200475}
 --- !u!1 &100210047714776031
 GameObject:
   m_ObjectHideFlags: 0
@@ -105,8 +105,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isActiveInGood: 1
   _isActiveInEvil: 1
-  _goodView: {fileID: 6387650024772542228}
-  _evilView: {fileID: 4348434723419632669}
+  _goodView: {fileID: 4348434723419632669}
+  _evilView: {fileID: 6387650024772542228}
 --- !u!114 &3482390345218441995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -269,8 +269,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5acfb7a50c24901863f471529d895bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _goodView: {fileID: 3287391528677262590}
-  _evilView: {fileID: 374196303325513885}
+  _goodView: {fileID: 374196303325513885}
+  _evilView: {fileID: 3287391528677262590}
 --- !u!1 &2054664108381994537
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,7 +329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.41509432, g: 0.41509432, b: 0.41509432, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.39215687}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -540,8 +540,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5acfb7a50c24901863f471529d895bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _goodView: {fileID: 7705957213259902847}
-  _evilView: {fileID: 7493892113113512251}
+  _goodView: {fileID: 7493892113113512251}
+  _evilView: {fileID: 7705957213259902847}
 --- !u!1 &4348434723419632669
 GameObject:
   m_ObjectHideFlags: 0
@@ -651,7 +651,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.41568628, g: 0.41568628, b: 0.41568628, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.39215687}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
