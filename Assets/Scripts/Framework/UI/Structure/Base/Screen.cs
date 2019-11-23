@@ -88,7 +88,7 @@ namespace Framework.UI.Structure.Base
 
             while (_canvasGroup.alpha < 1f)
             {
-                _canvasGroup.alpha += _transitionSpeed * Time.unscaledDeltaTime;
+                _canvasGroup.alpha += _transitionSpeed * Time.deltaTime;
                 yield return null;
             }
 
@@ -107,7 +107,7 @@ namespace Framework.UI.Structure.Base
 
             while (_canvasGroup.alpha > 0f)
             {
-                _canvasGroup.alpha -= _transitionSpeed * Time.unscaledDeltaTime;
+                _canvasGroup.alpha -= _transitionSpeed * Time.deltaTime;
                 yield return null;
             }
 

@@ -3,9 +3,18 @@ using UnityEngine;
 
 namespace Framework.Signals.Broadcasters
 {
-    public class SignalBroadcaster : MonoBehaviour
+    public interface ISignalBroadcaster
+    {
+        string SignalName { get; }
+        GameObject GameObject { get; }
+    }
+    
+    public class SignalBroadcaster : MonoBehaviour, ISignalBroadcaster
     {
         public Signal Signal;
+        
+        public string SignalName => Signal.Name;
+        public GameObject GameObject => gameObject;
 
         public void Broadcast()
         {
@@ -13,13 +22,16 @@ namespace Framework.Signals.Broadcasters
         }
     }
 
-    public abstract class SignalBroadcaster<TParameter, TParameterProvider> : MonoBehaviour
+    public abstract class SignalBroadcaster<TParameter, TParameterProvider> : MonoBehaviour, ISignalBroadcaster
         where TParameterProvider : ParameterProvider<TParameter>
     {
         public Signal Signal;
         [HideInInspector] public bool IsParameterProvided;
         [HideInInspector] public TParameter Parameter;
         [HideInInspector] public TParameterProvider Provider;
+        
+        public string SignalName => Signal.Name;
+        public GameObject GameObject => gameObject;
 
         public abstract void Broadcast();
         public abstract void Broadcast(TParameter parameter);

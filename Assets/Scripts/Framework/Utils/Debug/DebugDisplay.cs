@@ -37,7 +37,7 @@ namespace Framework.Utils.Debug
             {
                 Message = message,
                 Duration = duration,
-                StartingTime = Time.unscaledTime,
+                StartingTime = Time.time,
             });
         }
 
@@ -68,7 +68,7 @@ namespace Framework.Utils.Debug
         {
             for (int i = _messages.Count - 1; i >= 0; i--)
             {
-                if (Time.unscaledTime - _messages[i].StartingTime > _messages[i].Duration)
+                if (Time.time - _messages[i].StartingTime > _messages[i].Duration)
                 {
                     _messages.RemoveAt(i);
                 }
