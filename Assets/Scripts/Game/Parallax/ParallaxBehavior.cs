@@ -1,30 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace Assets.Scripts.Game.Parallax
+namespace Game.Parallax
 {
     public sealed class ParallaxBehavior : MonoBehaviour
     {
         [SerializeField] private float _parallaxEffect = 1f;
 
-        private float _lenght, _startPosition;
+        private float _startPosition;
+        private Vector3 _velocity;
         private Camera _camera;
 
-        void Start()
+        private void Start()
         {
             _camera = Camera.main;
             _startPosition = transform.position.x;
-            _lenght = GetComponent<SpriteRenderer>().bounds.size.x;
         }
 
-        void Update()
+        private void LateUpdate()
         {
             var dist = _camera.transform.position.x * _parallaxEffect;
-            transform.position = new Vector3(_startPosition + dist, transform.position.y, transform.position.z);
+            var targetPosition = new Vector3(_startPosition + dist, transform.position.y, transform.position.z);
+            transform.position = targetPosition;
         }
     }
 }

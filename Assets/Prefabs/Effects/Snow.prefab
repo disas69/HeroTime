@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4569363459017138796}
   - component: {fileID: 1385900692014647059}
   m_Layer: 0
-  m_Name: Dust 1
+  m_Name: Dust
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 2069558536275651167}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 28, y: 10, z: 1}
+  m_LocalScale: {x: 25, y: 25, z: 1}
   m_Children:
   - {fileID: 5696366009557726777}
   m_Father: {fileID: 0}
@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gravity: -1
-  _isReversed: 1
+  _isReversed: 0
   _particleSystem: {fileID: 5696366009557726783}
 --- !u!65 &1385900692014647059
 BoxCollider:
@@ -345,7 +345,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.25
+      scalar: 0.1
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -728,7 +728,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 15}
     m_Rotation: {x: -90, y: 0, z: 0}
-    m_Scale: {x: 1, y: 5, z: 0.25}
+    m_Scale: {x: 1, y: 5, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -1602,7 +1602,7 @@ ParticleSystem:
     y:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -4769,7 +4769,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 547621a110ad7bc49b7835785cc9d60f, type: 2}
+  - {fileID: 2100000, guid: dd58a001484f45640aa99d898ba0d617, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0

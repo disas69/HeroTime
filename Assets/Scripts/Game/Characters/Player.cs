@@ -104,8 +104,10 @@ namespace Game.Characters
             }
             else
             {
+                const float minYVelocity = 0.001f;
+                
                 if (_velocity.x > 0 || _velocity.x < 0 || _isJumping ||
-                    !_groundDetector.IsGrounded && (_rigidbody2D.velocity.y > 0.01f || _rigidbody2D.velocity.y < -0.01f))
+                    !_groundDetector.IsGrounded && (_rigidbody2D.velocity.y > minYVelocity || _rigidbody2D.velocity.y < -minYVelocity))
                 {
                     TimeController.Instance.Play();
                 }

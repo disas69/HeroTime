@@ -280,7 +280,6 @@
             </e>
             <e p="Parallax" t="Include">
               <e p="ParallaxBehavior.cs" t="Include" />
-              <e p="ParallaxController.cs" t="Include" />
             </e>
             <e p="Time" t="Include">
               <e p="TimeBehaviour.cs" t="Include" />

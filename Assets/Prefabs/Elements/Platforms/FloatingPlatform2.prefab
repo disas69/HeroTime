@@ -99,5 +99,20 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4729599942811827801, guid: 2ccf0de9dda006346a0205b64cec957c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4729599942811827801, guid: 2ccf0de9dda006346a0205b64cec957c,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2950729653372584207, guid: 2ccf0de9dda006346a0205b64cec957c,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ccf0de9dda006346a0205b64cec957c, type: 3}

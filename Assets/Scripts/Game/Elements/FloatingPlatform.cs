@@ -30,11 +30,18 @@ namespace Game.Elements
                 return;
             }
 
+            var vector = Vector2.zero;
             var delta = Vector2.Distance(_initialPosition, _rigidbody2D.position);
             if (delta < _maxDelta)
             {
-                _rigidbody2D.velocity = new Vector2(0, _speed * UnityEngine.Time.fixedDeltaTime) * 10f;
+                vector = Vector2.up;
             }
+            else if (delta > _maxDelta)
+            {
+                vector = Vector2.down;
+            }
+
+            _rigidbody2D.velocity = vector * _speed * 10f * UnityEngine.Time.fixedDeltaTime;
         }
     }
 }
