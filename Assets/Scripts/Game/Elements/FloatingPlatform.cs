@@ -3,13 +3,12 @@ using UnityEngine;
 
 namespace Game.Elements
 {
-    [RequireComponent(typeof(Rigidbody2D))]
     public class FloatingPlatform : MonoBehaviour
     {
         private bool _isFloating;
-        private Rigidbody2D _rigidbody2D;
         private Vector2 _initialPosition;
 
+        [SerializeField] private Rigidbody2D _rigidbody2D;
         [SerializeField] private float _speed;
         [SerializeField] private float _maxDelta;
 

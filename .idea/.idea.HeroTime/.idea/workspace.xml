@@ -2,13 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76dc1427-2bfe-473a-97b6-93510824668a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.HeroTime/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HeroTime/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Elements/Box.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Elements/Box.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Elements/Ground.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Elements/Ground.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.HeroTime/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HeroTime/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Materials/Dust 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/Materials/Dust 1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Elements/FloatingPlatform.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Elements/FloatingPlatform.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Elements/TextHint.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Elements/TextHint.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Levels/Level_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Levels/Level_1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Characters/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Characters/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/PlayPage.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/PlayPage.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Elements/FloatingPlatform.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Elements/FloatingPlatform.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/PostProcessProfile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/PostProcessProfile.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TimeManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TimeManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,29 +36,29 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="cs" value="91" />
+          <entry key="cs" value="92" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="C#" value="91" />
+          <entry key="C#" value="92" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cs" value="9595" />
+          <entry key="cs" value="9603" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="C#" value="9595" />
+          <entry key="C#" value="9603" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Game/Characters/Player.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="368">
@@ -168,27 +173,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Game/Elements/TextHint.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-176">
-              <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
-              <folding>
-                <marker date="1574100793404" expanded="false" signature="6:44" ph="..." />
-                <marker date="1574100793404" expanded="true" signature="69:1220" ph="{...}" />
-                <marker date="1574100793404" expanded="true" signature="154:1218" ph="{...}" />
-                <marker date="1574100793404" expanded="true" signature="273:384" ph="{...}" />
-                <marker date="1574100793404" expanded="true" signature="412:635" ph="{...}" />
-                <marker date="1574100793404" expanded="true" signature="508:588" ph="{...}" />
-                <marker date="1574100793404" expanded="true" signature="663:1034" ph="{...}" />
-                <marker date="1574100793404" expanded="true" signature="718:798" ph="{...}" />
-                <marker date="1574100793404" expanded="true" signature="875:1024" ph="{...}" />
-                <marker date="1574100793404" expanded="true" signature="1092:1212" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Game/Effects/DustEffect.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="425">
@@ -268,17 +252,33 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Game/Elements/FloatingPlatform.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="106">
-              <caret line="12" column="46" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
+            <state relative-caret-position="112">
+              <caret line="16" column="55" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="55" />
               <folding>
-                <marker date="1574511371847" expanded="true" signature="6:35" ph="..." />
-                <marker date="1574511371847" expanded="true" signature="60:1092" ph="{...}" />
-                <marker date="1574511371847" expanded="true" signature="156:1090" ph="{...}" />
-                <marker date="1574511371847" expanded="true" signature="408:538" ph="{...}" />
-                <marker date="1574511371847" expanded="true" signature="567:619" ph="{...}" />
-                <marker date="1574511371847" expanded="true" signature="655:1084" ph="{...}" />
-                <marker date="1574511371847" expanded="true" signature="771:823" ph="{...}" />
-                <marker date="1574511371847" expanded="true" signature="942:1074" ph="{...}" />
+                <marker date="1574525824765" expanded="true" signature="6:35" ph="..." />
+                <marker date="1574525824765" expanded="true" signature="60:1065" ph="{...}" />
+                <marker date="1574525824765" expanded="true" signature="112:1063" ph="{...}" />
+                <marker date="1574525824765" expanded="true" signature="381:511" ph="{...}" />
+                <marker date="1574525824765" expanded="true" signature="540:592" ph="{...}" />
+                <marker date="1574525824765" expanded="true" signature="628:1057" ph="{...}" />
+                <marker date="1574525824765" expanded="true" signature="744:796" ph="{...}" />
+                <marker date="1574525824765" expanded="true" signature="915:1047" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Game/UI/ProgressBar.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="224">
+              <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+              <folding>
+                <marker date="1573991834752" expanded="false" signature="6:40" ph="..." />
+                <marker date="1573991834752" expanded="true" signature="59:379" ph="{...}" />
+                <marker date="1573991834752" expanded="true" signature="106:377" ph="{...}" />
+                <marker date="1573991834752" expanded="true" signature="207:268" ph="{...}" />
+                <marker date="1573991834752" expanded="true" signature="306:371" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -419,10 +419,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Time/TimeController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/UI/TimeIconController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Effects/DustEffect.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Elements/FloatingPlatform.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Time/TimeBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Tools/GroundDetector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Characters/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Elements/FloatingPlatform.cs" />
       </list>
     </option>
   </component>
@@ -487,7 +487,7 @@
   <component name="PropertiesComponent">
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="Pla&#9;FILE&#9;file://C:/Work/Projects/HeroTime/Assets/Scripts/Game/Characters/Player.cs&#10;time&#9;FILE&#9;file://C:/Work/Projects/HeroTime/Assets/Scripts/Game/Time/TimeController.cs&#10;Ground&#9;FILE&#9;file://C:/Work/Projects/HeroTime/Assets/Scripts/Game/Tools/GroundDetector.cs&#10;Player&#9;FILE&#9;file://C:/Work/Projects/HeroTime/Assets/Scripts/Game/Characters/Player.cs&#10;timeB&#9;FILE&#9;file://C:/Work/Projects/HeroTime/Assets/Scripts/Game/Time/TimeBehaviour.cs&#10;Dime&#9;FILE&#9;file://C:/Work/Projects/HeroTime/Assets/Scripts/Game/Dimension/DimensionBehaviour.cs&#10;Time&#9;FILE&#9;file://C:/Work/Projects/HeroTime/Assets/Scripts/Game/Time/TimeController.cs&#10;Dimen&#9;FILE&#9;file://C:/Work/Projects/HeroTime/Assets/Scripts/Game/Dimension/DimensionBehaviour.cs&#10;Playe&#9;FILE&#9;file://C:/Work/Projects/HeroTime/Assets/Scripts/Game/Characters/Player.cs&#10;E&#9;FILE&#9;file://C:/Work/Projects/HeroTime/Assets/Scripts/Game/Characters/Enemy.cs&#10;Signals&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="Pro&#9;FILE&#9;file://C:/Work/Projects/HeroTime/Assets/Scripts/Game/UI/ProgressBar.cs&#10;Pla&#9;FILE&#9;file://C:/Work/Projects/HeroTime/Assets/Scripts/Game/Characters/Player.cs&#10;time&#9;FILE&#9;file://C:/Work/Projects/HeroTime/Assets/Scripts/Game/Time/TimeController.cs&#10;Ground&#9;FILE&#9;file://C:/Work/Projects/HeroTime/Assets/Scripts/Game/Tools/GroundDetector.cs&#10;Player&#9;FILE&#9;file://C:/Work/Projects/HeroTime/Assets/Scripts/Game/Characters/Player.cs&#10;timeB&#9;FILE&#9;file://C:/Work/Projects/HeroTime/Assets/Scripts/Game/Time/TimeBehaviour.cs&#10;Dime&#9;FILE&#9;file://C:/Work/Projects/HeroTime/Assets/Scripts/Game/Dimension/DimensionBehaviour.cs&#10;Time&#9;FILE&#9;file://C:/Work/Projects/HeroTime/Assets/Scripts/Game/Time/TimeController.cs&#10;Dimen&#9;FILE&#9;file://C:/Work/Projects/HeroTime/Assets/Scripts/Game/Dimension/DimensionBehaviour.cs&#10;Playe&#9;FILE&#9;file://C:/Work/Projects/HeroTime/Assets/Scripts/Game/Characters/Player.cs&#10;E&#9;FILE&#9;file://C:/Work/Projects/HeroTime/Assets/Scripts/Game/Characters/Enemy.cs&#10;Signals&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RunDashboard">
@@ -533,12 +533,12 @@
       <workItem from="1573892954680" duration="650000" />
       <workItem from="1573908342264" duration="4496000" />
       <workItem from="1573914093373" duration="33741000" />
-      <workItem from="1574490127568" duration="15013000" />
+      <workItem from="1574490127568" duration="16472000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84798000" />
+    <option name="totallyTimeSpent" value="86257000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -595,13 +595,13 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Game/Elements/FloatingPlatform.cs</url>
-          <line>33</line>
+          <line>32</line>
           <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Game/Elements/FloatingPlatform.cs" initialLine="33">
             <startOffsets>
-              <option value="837" />
+              <option value="810" />
             </startOffsets>
             <endOffsets>
-              <option value="907" />
+              <option value="880" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="8" />
@@ -649,13 +649,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Game/UI/ProgressBar.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
@@ -1001,23 +994,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Game/Elements/FloatingPlatform.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="12" column="46" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
-          <folding>
-            <marker date="1574511371847" expanded="true" signature="6:35" ph="..." />
-            <marker date="1574511371847" expanded="true" signature="60:1092" ph="{...}" />
-            <marker date="1574511371847" expanded="true" signature="156:1090" ph="{...}" />
-            <marker date="1574511371847" expanded="true" signature="408:538" ph="{...}" />
-            <marker date="1574511371847" expanded="true" signature="567:619" ph="{...}" />
-            <marker date="1574511371847" expanded="true" signature="655:1084" ph="{...}" />
-            <marker date="1574511371847" expanded="true" signature="771:823" ph="{...}" />
-            <marker date="1574511371847" expanded="true" signature="942:1074" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Game/Dimension/DimensionBehaviour.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -1206,6 +1182,37 @@
             <marker date="1574514145340" expanded="true" signature="4749:4857" ph="{...}" />
             <marker date="1574514145340" expanded="true" signature="4982:5050" ph="{...}" />
             <marker date="1574514145340" expanded="true" signature="5094:5158" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Game/Elements/FloatingPlatform.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="16" column="55" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="55" />
+          <folding>
+            <marker date="1574525824765" expanded="true" signature="6:35" ph="..." />
+            <marker date="1574525824765" expanded="true" signature="60:1065" ph="{...}" />
+            <marker date="1574525824765" expanded="true" signature="112:1063" ph="{...}" />
+            <marker date="1574525824765" expanded="true" signature="381:511" ph="{...}" />
+            <marker date="1574525824765" expanded="true" signature="540:592" ph="{...}" />
+            <marker date="1574525824765" expanded="true" signature="628:1057" ph="{...}" />
+            <marker date="1574525824765" expanded="true" signature="744:796" ph="{...}" />
+            <marker date="1574525824765" expanded="true" signature="915:1047" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Game/UI/ProgressBar.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+          <folding>
+            <marker date="1573991834752" expanded="false" signature="6:40" ph="..." />
+            <marker date="1573991834752" expanded="true" signature="59:379" ph="{...}" />
+            <marker date="1573991834752" expanded="true" signature="106:377" ph="{...}" />
+            <marker date="1573991834752" expanded="true" signature="207:268" ph="{...}" />
+            <marker date="1573991834752" expanded="true" signature="306:371" ph="{...}" />
           </folding>
         </state>
       </provider>
