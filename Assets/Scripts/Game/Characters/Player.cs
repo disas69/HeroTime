@@ -13,6 +13,7 @@ namespace Game.Characters
     public class Player : MonoBehaviour
     {
         private readonly int _velocityHash = Animator.StringToHash("Velocity");
+        private readonly int _groundDistance = Animator.StringToHash("GroundedDistance");
 
         private bool _isActive;
         private bool _isRewinding;
@@ -125,6 +126,7 @@ namespace Game.Characters
             }
             
             _animator.SetFloat(_velocityHash, Mathf.Abs(_velocity.x));
+            _animator.SetFloat(_groundDistance, _groundDetector.GroundDistance);
         }
 
         private void FixedUpdate()

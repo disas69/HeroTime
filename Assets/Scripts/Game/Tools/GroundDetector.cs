@@ -19,6 +19,7 @@ namespace Game.Characters
         [SerializeField] private float _minGroundDistance;
 
         public bool IsGrounded => _isGrounded;
+        public float GroundDistance => _groundDistance;
 
         private void Awake()
         {
