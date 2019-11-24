@@ -17,5 +17,5 @@ MonoBehaviour:
     JumpForce: 10
   Levels:
   - Level: 1
-    Prefab: {fileID: 2139142414651008613, guid: e41af5474e5f6584f9a35441d6f3106e,
+    Prefab: {fileID: 2139142414651008613, guid: 634e98d25366bae4289002a9c0482f01,
       type: 3}
