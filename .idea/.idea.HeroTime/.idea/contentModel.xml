@@ -265,6 +265,7 @@
               <e p="DustEffect.cs" t="Include" />
             </e>
             <e p="Elements" t="Include">
+              <e p="Box.cs" t="Include" />
               <e p="DamageZone.cs" t="Include" />
               <e p="FloatingPlatform.cs" t="Include" />
               <e p="TextHint.cs" t="Include" />

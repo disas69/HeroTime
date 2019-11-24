@@ -19,6 +19,11 @@ namespace Game.Time
             TimeController.Instance.Add(this);
         }
 
+        public void SetInitialIsKinematic(bool value)
+        {
+            _isKinematicInitial = value;
+        }
+
         public void Activate(bool isActive)
         {
             if (isActive)
