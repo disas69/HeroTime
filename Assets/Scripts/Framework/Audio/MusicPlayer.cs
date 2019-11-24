@@ -13,6 +13,7 @@ namespace Framework.Audio
 
         [SerializeField] private AudioStorage _audioStorage;
         [SerializeField] private bool _shuffle;
+        [SerializeField] private bool _playOnAwake;
 
         private void Awake()
         {
@@ -24,9 +25,14 @@ namespace Framework.Audio
                 _audioClips.Add(_audioStorage.Items[i].AudioClip);
             }
 
-            if (_shuffle)
+            if (_shuffle && _audioClips.Count > 0)
             {
                 Shuffle(_audioClips);
+            }
+
+            if (_playOnAwake)
+            {
+                Play();
             }
         }
 
@@ -65,7 +71,12 @@ namespace Framework.Audio
                 _clipIndex = 0;
             }
 
-            return _audioClips[_clipIndex];
+            if (_audioClips.Count > 0)
+            {
+                return _audioClips[_clipIndex];
+            }
+
+            return null;
         }
 
         private AudioSource GetAudioSource()

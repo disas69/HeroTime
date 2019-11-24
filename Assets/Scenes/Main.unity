@@ -1210,6 +1210,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2128748131}
   - component: {fileID: 2128748133}
+  - component: {fileID: 2128748134}
   - component: {fileID: 2128748132}
   m_Layer: 0
   m_Name: Audio
@@ -1278,6 +1279,21 @@ MonoBehaviour:
   _audioPoolCapacity: 3
   _volume: 1
   _pitch: 1
+--- !u!114 &2128748134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128748130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 539a5ebc5696db54e8312a5fbae84b25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioStorage: {fileID: 11400000, guid: 2b900022f9d50394a9824dca0cf39e82, type: 2}
+  _shuffle: 0
+  _playOnAwake: 1
 --- !u!1 &2139693780
 GameObject:
   m_ObjectHideFlags: 0
