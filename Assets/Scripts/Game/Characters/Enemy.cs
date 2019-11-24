@@ -81,6 +81,15 @@ namespace Game.Characters
             {
                 return;
             }
+            
+            if (_isGoingLeft)
+            {
+                gameObject.transform.localScale = new Vector3(1f, 1f, 1f);
+            }
+            else
+            {
+                gameObject.transform.localScale = new Vector3(-1f, 1f, 1f);
+            }
 
             var speed = _isTargetFound ? _chaseSpeed : _moveSpeed;
             Vector3 targetVelocity = new Vector2(_targetDirection.x * 10f * speed * UnityEngine.Time.fixedDeltaTime,
