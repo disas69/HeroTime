@@ -1,4 +1,5 @@
 ﻿using Framework.Extensions;
+using Framework.Signals;
 using Game.Data;
 using Game.Dimension;
 using Game.Elements;
@@ -140,6 +141,7 @@ namespace Game.Characters
             {
                 _rigidbody2D.AddForce(Vector2.up * GameConfiguration.PlayerSettings.JumpForce, ForceMode2D.Impulse);
                 _isJumping = false;
+                SignalsManager.Broadcast("Audio", "jump");
             }
             else
             {
@@ -178,6 +180,7 @@ namespace Game.Characters
                 var enemy = other.gameObject.GetComponent<Enemy>();
                 if (enemy != null)
                 {
+                    SignalsManager.Broadcast("Audio", "mob");
                     Die();
                     return;
                 }
@@ -193,6 +196,7 @@ namespace Game.Characters
         private void Die()
         {
             Instantiate(_deathAnimation, transform.position, Quaternion.identity);
+            SignalsManager.Broadcast("Audio", "death");
             _onPlayedDied.Invoke();
         }
 

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Framework.Signals;
 using Framework.Tools.Singleton;
 using UnityEngine;
 
@@ -64,6 +65,7 @@ namespace Game.Dimension
 
             _changeCoroutine = StartCoroutine(ApplyDimension(dimension));
             
+            SignalsManager.Broadcast("Audio", "transition");
             DimensionChanged?.Invoke(_dimension);
         }
 

@@ -12,4 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c521c5de0aaf405895541faf255dd5ae, type: 3}
   m_Name: AudioStorage
   m_EditorClassIdentifier: 
-  Items: []
+  Items:
+  - Name: transition
+    AudioClip: {fileID: 8300000, guid: 0eb2b9f2ddc8ab5448b33061cb6cd3e5, type: 3}
+  - Name: rewind
+    AudioClip: {fileID: 8300000, guid: d0cb9ee6e5b6d80498e36fbcb8fe2a42, type: 3}
+  - Name: jump
+    AudioClip: {fileID: 8300000, guid: 8e5ce5be989b1f24e9b84a94696e4041, type: 3}
+  - Name: death
+    AudioClip: {fileID: 8300000, guid: 5afa29ed8939f9248bbd09394dea4527, type: 3}
+  - Name: mob
+    AudioClip: {fileID: 8300000, guid: 596a99dda8ae0a744beeafc2b9ac8849, type: 3}

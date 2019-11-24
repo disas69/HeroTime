@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Framework.Signals;
 using Framework.Tools.Singleton;
 using Framework.UnityEvents;
 using UnityEngine;
@@ -76,6 +77,11 @@ namespace Game.Time
 
         public void Reverse()
         {
+            if (!_isReversed)
+            {
+                SignalsManager.Broadcast("Audio", "rewind");
+            }
+            
             _targetTime = 1f;
             _isPlaying = true;
             _isReversed = true;
