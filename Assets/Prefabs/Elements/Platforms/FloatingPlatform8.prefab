@@ -12,6 +12,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloatingPlatform8
       objectReference: {fileID: 0}
+    - target: {fileID: 2868125019885335051, guid: d4dda6acfece1a94099df79749a681d2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2868125019885335050, guid: d4dda6acfece1a94099df79749a681d2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -88,12 +93,22 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 5845ebb5890a39e4cae20c4adc83da57,
         type: 3}
+    - target: {fileID: 8585848568121479581, guid: d4dda6acfece1a94099df79749a681d2,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5719299088215320651, guid: d4dda6acfece1a94099df79749a681d2,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 5845ebb5890a39e4cae20c4adc83da57,
         type: 3}
+    - target: {fileID: 5719299088215320651, guid: d4dda6acfece1a94099df79749a681d2,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6618751773345809081, guid: d4dda6acfece1a94099df79749a681d2,
         type: 3}
       propertyPath: m_Size.x

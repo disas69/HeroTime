@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 329824221653650349, guid: 4b4d53c0c8da6b84fb34888e5b74c5f4,
         type: 3}
       propertyPath: m_Name
-      value: Bridge4
+      value: Bridge2
       objectReference: {fileID: 0}
     - target: {fileID: 329824221653650348, guid: 4b4d53c0c8da6b84fb34888e5b74c5f4,
         type: 3}
@@ -79,5 +79,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 1c429feba794ca3468b68e05ad543ece,
         type: 3}
+    - target: {fileID: 2126807185791613167, guid: 4b4d53c0c8da6b84fb34888e5b74c5f4,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1475939855798395331, guid: 4b4d53c0c8da6b84fb34888e5b74c5f4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b4d53c0c8da6b84fb34888e5b74c5f4, type: 3}
