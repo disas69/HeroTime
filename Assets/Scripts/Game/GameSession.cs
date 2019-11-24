@@ -12,7 +12,7 @@ namespace Game
     {
         private Level _level;
 
-        [SerializeField] private Camera _camera;
+        [SerializeField] private UnityEngine.Camera _camera;
         [SerializeField] private SceneManager _scene;
         [SerializeField] private Player _player;
 

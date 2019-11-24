@@ -581,6 +581,7 @@ GameObject:
   - component: {fileID: 1397522033}
   - component: {fileID: 1397522032}
   - component: {fileID: 1397522034}
+  - component: {fileID: 1397522035}
   m_Layer: 9
   m_Name: Camera
   m_TagString: MainCamera
@@ -749,6 +750,46 @@ MonoBehaviour:
   _followZ: 0
   _yLimit: -3
   _moveSmoothing: 0.2
+--- !u!114 &1397522035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1397522028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35c24cdfc39f82544bae2a03e88ba9e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Amount: {x: 1, y: 1, z: 0}
+  Duration: 1
+  Speed: 10
+  Curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  DeltaMovement: 1
 --- !u!114 &1572692632 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7458944463443758250, guid: ed0efc3f536b1d34bba50cf0e6c4584e,
@@ -1338,6 +1379,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7458944463443758250, guid: ed0efc3f536b1d34bba50cf0e6c4584e,
+        type: 3}
+      propertyPath: _onPlayedDied.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7458944463443758250, guid: ed0efc3f536b1d34bba50cf0e6c4584e,
+        type: 3}
+      propertyPath: _onPlayedDied.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7458944463443758250, guid: ed0efc3f536b1d34bba50cf0e6c4584e,
+        type: 3}
+      propertyPath: _onPlayedDied.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7458944463443758250, guid: ed0efc3f536b1d34bba50cf0e6c4584e,
+        type: 3}
+      propertyPath: _onPlayedDied.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1397522035}
+    - target: {fileID: 7458944463443758250, guid: ed0efc3f536b1d34bba50cf0e6c4584e,
+        type: 3}
+      propertyPath: _onPlayedDied.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Shake
+      objectReference: {fileID: 0}
+    - target: {fileID: 7458944463443758250, guid: ed0efc3f536b1d34bba50cf0e6c4584e,
+        type: 3}
+      propertyPath: _onPlayedDied.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7458944463443758251, guid: ed0efc3f536b1d34bba50cf0e6c4584e,
         type: 3}

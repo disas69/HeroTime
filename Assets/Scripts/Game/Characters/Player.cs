@@ -48,13 +48,13 @@ namespace Game.Characters
             {
                 if (context.ReadValue<Vector2>().x > 0f)
                 {
-                    _sprite.flipX = false;
                     _velocity = Vector2.right;
+                    gameObject.transform.localScale = new Vector3(1f, 1f, 1f);
                 }
                 else
                 {
-                    _sprite.flipX = true;
                     _velocity = Vector2.left;
+                    gameObject.transform.localScale = new Vector3(-1f, 1f, 1f);
                 }
             }
             else if (context.canceled)

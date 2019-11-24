@@ -288,6 +288,7 @@
             </e>
             <e p="Tools" t="Include">
               <e p="AnimationUscaledTimePlayer.cs" t="Include" />
+              <e p="CameraShake.cs" t="Include" />
               <e p="GameStateParameterProvider.cs" t="Include" />
               <e p="GroundDetector.cs" t="Include" />
             </e>
