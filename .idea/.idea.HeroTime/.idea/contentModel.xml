@@ -292,6 +292,7 @@
               <e p="CameraShake.cs" t="Include" />
               <e p="GameStateParameterProvider.cs" t="Include" />
               <e p="GroundDetector.cs" t="Include" />
+              <e p="SelfDestroyer.cs" t="Include" />
             </e>
             <e p="UI" t="Include">
               <e p="EndPage.cs" t="Include" />

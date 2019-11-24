@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1180353301300870519}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1180353301628800617}
@@ -153,6 +153,7 @@ MonoBehaviour:
   _chaseSpeed: 30
   _searchRadius: 5
   _patrolRadius: 5
+  _raycastLength: 1
 --- !u!114 &6249224023224043152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,5 +241,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.65, y: 2.35}
+  m_Size: {x: 1.65, y: 2.7}
   m_EdgeRadius: 0

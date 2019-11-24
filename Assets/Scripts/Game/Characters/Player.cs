@@ -1,4 +1,5 @@
-﻿using Game.Data;
+﻿using Framework.Extensions;
+using Game.Data;
 using Game.Dimension;
 using Game.Elements;
 using Game.Time;
@@ -11,6 +12,8 @@ namespace Game.Characters
     [RequireComponent(typeof(Rigidbody2D), typeof(GroundDetector), typeof(PlayerInput))]
     public class Player : MonoBehaviour
     {
+        private readonly int _velocityHash = Animator.StringToHash("Velocity");
+
         private bool _isActive;
         private bool _isRewinding;
         private Rigidbody2D _rigidbody2D;
@@ -20,7 +23,9 @@ namespace Game.Characters
         private Vector2 _gravity;
         private bool _isJumping;
 
-        [SerializeField] private SpriteRenderer _sprite;
+        [SerializeField] private GameObject _view;
+        [SerializeField] private Animator _animator;
+        [SerializeField] private GameObject _deathAnimation;
         [SerializeField] private UnityEvent _onPlayedDied;
 
         private void Awake()
@@ -39,6 +44,7 @@ namespace Game.Characters
         public void Activate(bool isActive)
         {
             _isActive = isActive;
+            _view.SetActive(isActive);
             gameObject.SetActive(isActive);
         }
 
@@ -105,9 +111,10 @@ namespace Game.Characters
             else
             {
                 const float minYVelocity = 0.001f;
-                
+
                 if (_velocity.x > 0 || _velocity.x < 0 || _isJumping ||
-                    !_groundDetector.IsGrounded && (_rigidbody2D.velocity.y > minYVelocity || _rigidbody2D.velocity.y < -minYVelocity))
+                    !_groundDetector.IsGrounded &&
+                    (_rigidbody2D.velocity.y > minYVelocity || _rigidbody2D.velocity.y < -minYVelocity))
                 {
                     TimeController.Instance.Play();
                 }
@@ -116,6 +123,8 @@ namespace Game.Characters
                     TimeController.Instance.Stop();
                 }
             }
+            
+            _animator.SetFloat(_velocityHash, Mathf.Abs(_velocity.x));
         }
 
         private void FixedUpdate()
@@ -146,7 +155,7 @@ namespace Game.Characters
             var fallZone = other.gameObject.GetComponent<DamageZone>();
             if (fallZone != null)
             {
-                _onPlayedDied.Invoke();
+                Die();
             }
         }
 
@@ -167,7 +176,7 @@ namespace Game.Characters
                 var enemy = other.gameObject.GetComponent<Enemy>();
                 if (enemy != null)
                 {
-                    _onPlayedDied.Invoke();
+                    Die();
                     return;
                 }
             }
@@ -175,8 +184,14 @@ namespace Game.Characters
             var damageZone = other.gameObject.GetComponent<DamageZone>();
             if (damageZone != null)
             {
-                _onPlayedDied.Invoke();
+                Die();
             }
+        }
+
+        private void Die()
+        {
+            Instantiate(_deathAnimation, transform.position, Quaternion.identity);
+            _onPlayedDied.Invoke();
         }
 
         private void OnDisable()
