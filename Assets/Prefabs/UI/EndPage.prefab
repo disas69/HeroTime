@@ -138,7 +138,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _inTransition: 1
   _outTransition: 0
-  _transitionSpeed: 0.8
+  _transitionSpeed: 1
   _model: {fileID: 0}
   WaitTime: 3
 --- !u!1 &6342858779942308108

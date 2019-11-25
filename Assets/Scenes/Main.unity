@@ -1728,34 +1728,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7458944463443758250, guid: ed0efc3f536b1d34bba50cf0e6c4584e,
         type: 3}
-      propertyPath: _onPlayedDied.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7458944463443758250, guid: ed0efc3f536b1d34bba50cf0e6c4584e,
-        type: 3}
-      propertyPath: _onPlayedDied.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7458944463443758250, guid: ed0efc3f536b1d34bba50cf0e6c4584e,
-        type: 3}
-      propertyPath: _onPlayedDied.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7458944463443758250, guid: ed0efc3f536b1d34bba50cf0e6c4584e,
-        type: 3}
       propertyPath: _onPlayedDied.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1397522035}
-    - target: {fileID: 7458944463443758250, guid: ed0efc3f536b1d34bba50cf0e6c4584e,
-        type: 3}
-      propertyPath: _onPlayedDied.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: Shake
-      objectReference: {fileID: 0}
-    - target: {fileID: 7458944463443758250, guid: ed0efc3f536b1d34bba50cf0e6c4584e,
-        type: 3}
-      propertyPath: _onPlayedDied.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 7458944463443758251, guid: ed0efc3f536b1d34bba50cf0e6c4584e,
         type: 3}
       propertyPath: m_Camera

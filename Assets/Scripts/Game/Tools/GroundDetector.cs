@@ -11,10 +11,10 @@ namespace Game.Characters
         private bool _isActive;
         private int _groundMask;
         private int _groundLayer;
-        private bool _isGrounded;
         private float _groundDistance;
         private List<Collision2D> _groundCollisions;
 
+        [SerializeField] private bool _isGrounded;
         [SerializeField] private int _slopeLimit = 30;
         [SerializeField] private float _minGroundDistance;
 
@@ -41,6 +41,7 @@ namespace Game.Characters
 
         private void UpdateGroundedStatus()
         {
+            /*
             var groundCollision = GetValidGroundCollision();
             if (groundCollision != null)
             {
@@ -48,6 +49,7 @@ namespace Game.Characters
                 _isGrounded = true;
             }
             else
+            */
             {
                 _isGrounded = IsGroundInPosition(transform.position, out _groundDistance);
             }
@@ -65,6 +67,7 @@ namespace Game.Characters
 
                     if (angle <= _slopeLimit)
                     {
+                        Debug.Log($"Collision angle: {angle}");
                         return collision;
                     }
                 }

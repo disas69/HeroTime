@@ -829,7 +829,7 @@ MonoBehaviour:
   _isActiveInGood: 1
   _isActiveInEvil: 0
   _goodView: {fileID: 1187498772971572241}
-  _evilView: {fileID: 0}
+  _evilView: {fileID: 1187498772971572241}
 --- !u!1 &1818098578818363981
 GameObject:
   m_ObjectHideFlags: 0

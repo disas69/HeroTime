@@ -25,7 +25,11 @@ namespace Game.Dimension
 
                 if (_isActiveInGood)
                 {
-                    _goodView.SetActive(true);
+                    if (_goodView != null)
+                    {
+                        _goodView.SetActive(true);
+                    }
+                    
                     gameObject.SetActive(true);
                 }
                 else
@@ -42,7 +46,11 @@ namespace Game.Dimension
 
                 if (_isActiveInEvil)
                 {
-                    _evilView.SetActive(true);
+                    if (_evilView != null)
+                    {
+                        _evilView.SetActive(true);
+                    }
+                    
                     gameObject.SetActive(true);
                 }
                 else
