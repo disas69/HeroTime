@@ -56,26 +56,24 @@ namespace Game.Characters
             {
                 if (context.ReadValue<Vector2>().x > 0f)
                 {
-                    _velocity = Vector2.right;
-                    gameObject.transform.localScale = new Vector3(1f, 1f, 1f);
+                    MoveRight();
                 }
                 else
                 {
-                    _velocity = Vector2.left;
-                    gameObject.transform.localScale = new Vector3(-1f, 1f, 1f);
+                    MoveLeft();
                 }
             }
             else if (context.canceled)
             {
-                _velocity = Vector2.zero;
+                Stop();
             }
         }
 
         public void JumpOnPerformed(InputAction.CallbackContext context)
         {
-            if (context.started && _groundDetector.IsGrounded && !_isJumping)
+            if (context.started)
             {
-                _isJumping = true;
+                Jump();
             }
         }
 
@@ -83,7 +81,7 @@ namespace Game.Characters
         {
             if (context.started)
             {
-                DimensionController.Instance.Change();
+                ChangeDimension();
             }
         }
 
@@ -91,12 +89,47 @@ namespace Game.Characters
         {
             if (context.started)
             {
-                _isRewinding = true;
+                Rewind(true);
             }
             else if (context.canceled)
             {
-                _isRewinding = false;
+                Rewind(false);
             }
+        }
+
+        public void MoveRight()
+        {
+            _velocity = Vector2.right;
+            gameObject.transform.localScale = new Vector3(1f, 1f, 1f);
+        }
+
+        public void MoveLeft()
+        {
+            _velocity = Vector2.left;
+            gameObject.transform.localScale = new Vector3(-1f, 1f, 1f);
+        }
+
+        public void Stop()
+        {
+            _velocity = Vector2.zero;
+        }
+
+        public void Jump()
+        {
+            if (_groundDetector.IsGrounded && !_isJumping)
+            {
+                _isJumping = true;
+            }
+        }
+
+        public void ChangeDimension()
+        {
+            DimensionController.Instance.Change();
+        }
+
+        public void Rewind(bool value)
+        {
+            _isRewinding = value;
         }
 
         private void Update()
